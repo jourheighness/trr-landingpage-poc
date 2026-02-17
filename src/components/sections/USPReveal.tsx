@@ -15,7 +15,7 @@ export default function USPReveal() {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={isVisible ? { opacity: 1, scale: 1 } : {}}
           transition={{ duration: 0.7 }}
-          className="text-3xl md:text-5xl lg:text-6xl font-extrabold text-primary-foreground mb-8"
+          className="text-3xl md:text-5xl lg:text-6xl font-bold font-serif text-primary-foreground mb-8"
         >
           Allt detta är redan betalt av din arbetsgivare
         </motion.h2>

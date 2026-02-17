@@ -27,7 +27,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.15 }}
-          className="text-4xl md:text-6xl lg:text-7xl font-extrabold text-gradient-hero leading-tight mb-6"
+          className="text-4xl md:text-6xl lg:text-7xl font-bold font-serif text-gradient-hero leading-tight mb-6"
         >
           Vad kan du bli som du inte vet om?
         </motion.h1>

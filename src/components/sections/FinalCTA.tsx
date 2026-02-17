@@ -12,7 +12,7 @@ export default function FinalCTA() {
           initial={{ opacity: 0, y: 20 }}
           animate={isVisible ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-3xl md:text-5xl font-bold mb-8 text-foreground"
+          className="text-3xl md:text-5xl font-bold font-serif mb-8 text-foreground"
         >
           Börja med att se vad du kan bli
         </motion.h2>

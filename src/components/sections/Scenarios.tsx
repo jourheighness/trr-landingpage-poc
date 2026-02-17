@@ -35,7 +35,7 @@ export default function Scenarios() {
           initial={{ opacity: 0, y: 20 }}
           animate={isVisible ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-3xl md:text-5xl font-bold text-center mb-16 text-foreground"
+          className="text-3xl md:text-5xl font-bold font-serif text-center mb-16 text-foreground"
         >
           TRR genom hela arbetslivet
         </motion.h2>
