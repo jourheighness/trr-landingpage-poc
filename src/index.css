@@ -6,23 +6,23 @@
 
 @layer base {
   :root {
-    --background: 210 20% 98%;
-    --foreground: 210 50% 10%;
+    --background: 270 10% 98%;
+    --foreground: 265 40% 12%;
 
     --card: 0 0% 100%;
-    --card-foreground: 210 50% 10%;
+    --card-foreground: 265 40% 12%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 210 50% 10%;
+    --popover-foreground: 265 40% 12%;
 
-    --primary: 207 100% 31%;
+    --primary: 264 55% 49%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 30% 95%;
-    --secondary-foreground: 207 100% 31%;
+    --secondary: 268 30% 95%;
+    --secondary-foreground: 264 55% 40%;
 
-    --muted: 210 20% 96%;
-    --muted-foreground: 210 15% 45%;
+    --muted: 270 15% 95%;
+    --muted-foreground: 265 12% 45%;
 
     --accent: 30 90% 55%;
     --accent-foreground: 0 0% 100%;
@@ -30,23 +30,23 @@
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 210 20% 90%;
-    --input: 210 20% 90%;
-    --ring: 207 100% 31%;
+    --border: 268 15% 90%;
+    --input: 268 15% 90%;
+    --ring: 264 55% 49%;
 
     --radius: 0.75rem;
 
     /* TRR custom tokens */
-    --trr-blue: 207 100% 31%;
-    --trr-blue-dark: 210 80% 20%;
-    --trr-blue-light: 207 60% 92%;
+    --trr-purple: 264 55% 49%;
+    --trr-purple-dark: 264 60% 25%;
+    --trr-purple-light: 264 40% 92%;
     --trr-warm: 30 90% 55%;
-    --trr-warm-light: 35 100% 95%;
+    --trr-warm-light: 35 100% 96%;
     --trr-coral: 12 80% 60%;
     --trr-green: 160 50% 45%;
-    --trr-gradient-hero: linear-gradient(135deg, hsl(207 100% 31%) 0%, hsl(210 80% 20%) 50%, hsl(220 60% 15%) 100%);
+    --trr-gradient-hero: linear-gradient(135deg, hsl(264 55% 49%) 0%, hsl(264 60% 30%) 50%, hsl(268 55% 18%) 100%);
     --trr-gradient-warm: linear-gradient(135deg, hsl(30 90% 55%) 0%, hsl(12 80% 60%) 100%);
-    --trr-gradient-reveal: linear-gradient(135deg, hsl(210 80% 15%) 0%, hsl(207 100% 25%) 100%);
+    --trr-gradient-reveal: linear-gradient(135deg, hsl(268 55% 15%) 0%, hsl(264 60% 28%) 100%);
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -77,7 +77,7 @@
 @layer utilities {
   .text-gradient-hero {
     @apply bg-clip-text text-transparent;
-    background-image: linear-gradient(135deg, hsl(0 0% 100%) 0%, hsl(210 30% 85%) 100%);
+    background-image: linear-gradient(135deg, hsl(0 0% 100%) 0%, hsl(270 20% 85%) 100%);
   }
 
   .bg-hero-gradient {

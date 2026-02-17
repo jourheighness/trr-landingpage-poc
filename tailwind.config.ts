@@ -51,9 +51,9 @@ export default {
           foreground: "hsl(var(--card-foreground))",
         },
         trr: {
-          blue: "hsl(var(--trr-blue))",
-          "blue-dark": "hsl(var(--trr-blue-dark))",
-          "blue-light": "hsl(var(--trr-blue-light))",
+          purple: "hsl(var(--trr-purple))",
+          "purple-dark": "hsl(var(--trr-purple-dark))",
+          "purple-light": "hsl(var(--trr-purple-light))",
           warm: "hsl(var(--trr-warm))",
           "warm-light": "hsl(var(--trr-warm-light))",
           coral: "hsl(var(--trr-coral))",
