@@ -9,7 +9,7 @@ export default function Hero() {
       {/* Background image */}
       <div className="absolute inset-0">
         <img src={heroBg} alt="" className="w-full h-full object-cover object-right" />
-        <div className="absolute inset-0 bg-gradient-to-r from-[hsl(264,55%,18%,0.85)] via-[hsl(264,55%,22%,0.6)] to-[hsl(268,55%,25%,0.3)]" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[hsl(0,0%,0%,0.7)] via-[hsl(0,0%,0%,0.4)] to-[hsl(0,0%,0%,0.1)]" />
       </div>
 
       <div className="relative z-10 max-w-2xl">
