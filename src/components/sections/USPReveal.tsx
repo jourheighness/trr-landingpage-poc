@@ -26,8 +26,7 @@ export default function USPReveal() {
           className="text-lg md:text-xl text-primary-foreground/80 leading-relaxed max-w-3xl mx-auto"
         >
           Genom kollektivavtalet har du tillgång till karriärcoaching, betald utbildning och
-          verktyg som hjälper dig framåt. Du behöver inte vara uppsagd. Du behöver inte vara i kris.
-          Du behöver bara vara nyfiken.
+          verktyg som hjälper dig framåt. TRR hjälper dig utforska, förstå och ta nästa steg i karriären — gratis, via din arbetsgivare.
         </motion.p>
       </div>
     </section>
