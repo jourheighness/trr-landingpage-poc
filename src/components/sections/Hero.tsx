@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
-import trrLogo from "@/assets/trr-logo.png";
+import trrLogo from "@/assets/trr-logo.svg";
 
 export default function Hero() {
   return (
@@ -16,7 +16,8 @@ export default function Hero() {
         <motion.img
           src={trrLogo}
           alt="TRR"
-          className="h-12 md:h-16 mx-auto mb-10 brightness-0 invert"
+          className="h-10 md:h-14 mx-auto mb-10"
+          style={{ filter: "brightness(0) invert(1)" }}
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
