@@ -1,75 +1,147 @@
 import { motion } from "framer-motion";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import { ArrowRight } from "lucide-react";
 
-const situations = [
+// Import images
+import SmabarnslivetImage from '@/assets/Småbarnslivet-image.png';
+import VaxlaImage from '@/assets/Växla-image.png';
+import AccelereraImage from '@/assets/Accelerera-image.png';
+import UppsagdImage from '@/assets/Uppsagd-image.png';
+import VagskalImage from '@/assets/Vägskäl-image.png';
+
+// Import videos
+import SmabarnslivetVideo from '@/assets/Småbarnslivet-video.mp4';
+import VaxlaVideo from '@/assets/Växla-video.mp4';
+import AccelereraVideo from '@/assets/Accelerera-video.mp4';
+import UppsagdVideo from '@/assets/Uppsagd-video.mp4';
+import VagskalVideo from '@/assets/Vägskäl-video.mp4';
+import { useRef } from "react";
+
+const cards = [
   {
-    feeling: "Nyfiken",
-    quote: "Jag trivs. Men ibland undrar jag vad mer som finns där ute, utan att riktigt veta hur jag ska ta reda på det.",
+    header: "Småbarnslivet",
+    body: "När tiden är knapp men ambitionen finns kvar. Hitta balansen mellan hämtningar och karriärkliv.",
+    imgSrc: SmabarnslivetImage,
+    videoSrc: SmabarnslivetVideo,
+    alt: "Småbarnslivet och karriär"
   },
   {
-    feeling: "Rastlös",
-    quote: "Jag har gjort samma sak i sex år. Ingen har frågat vad jag egentligen vill. Inte ens jag själv.",
+    header: "Växla ner",
+    body: "Redo för mer frihet? Utforska deltidslösningar, mentorskap eller en passion du väntat med.",
+    imgSrc: VaxlaImage,
+    videoSrc: VaxlaVideo,
+    alt: "Växla ner i karriären"
   },
   {
-    feeling: "Redo för nästa kapitel",
-    quote: "Det är inget fel på jobbet. Det passar bara inte mig längre. Kanske har det aldrig gjort det.",
+    header: "Accelerera",
+    body: "Dags för nästa stora steg? Vi matchar dig med ledarskapsutbildningar och chefsnätverk.",
+    imgSrc: AccelereraImage,
+    videoSrc: AccelereraVideo,
+    alt: "Accelerera karriären"
   },
   {
-    feeling: "Osäker på riktningen",
-    quote: "Jag vet att jag kan mer. Men dagarna ser likadana ut och jag vet inte var jag ska börja leta.",
+    header: "Uppsagd",
+    body: "När kartan ritas om utan att du bett om det. Vi hjälper dig att vända motgång till nästa möjlighet.",
+    imgSrc: UppsagdImage,
+    videoSrc: UppsagdVideo,
+    alt: "Stöd vid uppsägning"
+  },
+  {
+    header: "Vägskäl",
+    body: "Känns det inte rätt längre? Vi ger dig verktygen att utforska nya branscher eller starta eget.",
+    imgSrc: VagskalImage,
+    videoSrc: VagskalVideo,
+    alt: "Vid ett vägskäl i livet"
   },
 ];
 
 export default function Recognition() {
   const { ref, isVisible } = useScrollAnimation();
+  const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
+
+  const handleMouseEnter = (index: number) => {
+    const video = videoRefs.current[index];
+    if (video) {
+      video.currentTime = 0;
+      video.play().catch(e => console.log("Video play failed", e));
+    }
+  };
+
+  const handleMouseLeave = (index: number) => {
+    const video = videoRefs.current[index];
+    if (video) {
+      video.pause();
+      video.currentTime = 0;
+    }
+  };
 
   return (
-    <section ref={ref} className="py-24 md:py-32 px-6">
-      <div className="max-w-4xl mx-auto">
-        <motion.p
-          initial={{ opacity: 0, y: 10 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.5 }}
-          className="text-primary font-semibold text-center mb-3 tracking-wide uppercase text-sm"
-        >
-          Känner du igen dig
-        </motion.p>
+    <section ref={ref} className="py-24 md:py-32">
+      <div className="max-w-4xl mx-auto px-6">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           animate={isVisible ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.1 }}
           className="text-3xl md:text-5xl font-bold font-serif text-center mb-6 text-foreground"
         >
-          Du behöver inte ha det dåligt för att vara nyfiken på något nytt
+          Var befinner du dig i livet?
         </motion.h2>
         <motion.p
           initial={{ opacity: 0, y: 15 }}
           animate={isVisible ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="text-muted-foreground text-lg text-center mb-16 max-w-2xl mx-auto"
+          className="text-muted-foreground text-base md:text-lg text-center mb-32 max-w-2xl mx-auto"
         >
-          Ibland är det inte en kris. Det är en fråga som dyker upp på väg hem från jobbet, och som aldrig riktigt försvinner.
+          Ingen karriärväg är rak. Vi har verktygen för varje sväng, gupp och raksträcka
         </motion.p>
+      </div>
 
-        <div className="grid md:grid-cols-2 gap-5">
-          {situations.map((s, i) => (
+      <div className="w-full px-6 lg:px-16">
+        <div className="flex flex-wrap lg:flex-nowrap justify-center gap-6 items-center lg:items-end h-auto lg:h-[600px] w-full">
+          {cards.map((item, index) => (
             <motion.div
-              key={s.feeling}
+              key={item.header}
               initial={{ opacity: 0, y: 20 }}
               animate={isVisible ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.5, delay: 0.15 + i * 0.1 }}
-              className="bg-card border border-border rounded-2xl p-8 md:p-10 hover:border-primary/20 transition-colors duration-300"
+              transition={{ duration: 0.5, delay: 0.15 + index * 0.1 }}
+              className="relative group cursor-pointer w-full md:w-[calc(33.33%-1rem)] lg:w-full lg:flex-1"
+              onMouseEnter={() => handleMouseEnter(index)}
+              onMouseLeave={() => handleMouseLeave(index)}
             >
-              <p className="text-sm font-semibold text-primary mb-4 tracking-wide uppercase">
-                {s.feeling}
-              </p>
-              <p className="text-foreground text-lg leading-relaxed">
-                "{s.quote}"
-              </p>
+              {/* Image/Video Area - Align bottom, grow up */}
+              <div
+                className={`w-full rounded-2xl mb-4 transition-all duration-700 ease-in-out h-[250px] md:h-[300px] lg:h-[450px] lg:group-hover:h-[550px] overflow-hidden relative shadow-sm`}
+              >
+                <video
+                  ref={el => videoRefs.current[index] = el}
+                  src={item.videoSrc}
+                  poster={item.imgSrc}
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  muted
+                  loop
+                  playsInline
+                />
+
+                {/* Overlay for better text contrast if needed, or subtle effect */}
+                <div className="absolute inset-0 bg-black/5 group-hover:bg-transparent transition-colors duration-500 pointer-events-none" />
+
+                {/* Top Gradient & Link Action - Appears on Hover */}
+                <div className="absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out pointer-events-none" />
+                <div className="absolute top-4 right-4 flex items-center gap-2 text-white text-sm font-medium opacity-0 translate-y-[-10px] group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 delay-100 ease-out pointer-events-none">
+                  <span>Utforska vägen</span>
+                  <ArrowRight className="w-4 h-4" />
+                </div>
+              </div>
+
+              {/* Text Content */}
+              <div className="flex flex-col items-start px-1 h-auto md:h-[160px] justify-start">
+                <h3 className="font-bold text-foreground text-xl mb-2">{item.header}</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">{item.body}</p>
+              </div>
             </motion.div>
           ))}
         </div>
       </div>
-    </section>
+    </section >
   );
 }
