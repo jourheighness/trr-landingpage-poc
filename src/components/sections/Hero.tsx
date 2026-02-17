@@ -5,18 +5,18 @@ import heroBg from "@/assets/hero-bg.png";
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden px-6">
+    <section className="relative min-h-screen flex items-center overflow-hidden px-6 md:px-16 lg:px-24">
       {/* Background image */}
       <div className="absolute inset-0">
-        <img src={heroBg} alt="" className="w-full h-full object-cover object-center" />
-        <div className="absolute inset-0 bg-gradient-to-b from-[hsl(264,55%,20%,0.5)] via-[hsl(264,55%,25%,0.4)] to-[hsl(268,55%,18%,0.65)]" />
+        <img src={heroBg} alt="" className="w-full h-full object-cover object-right" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[hsl(264,55%,18%,0.85)] via-[hsl(264,55%,22%,0.6)] to-[hsl(268,55%,25%,0.3)]" />
       </div>
 
-      <div className="relative z-10 max-w-4xl mx-auto text-center">
+      <div className="relative z-10 max-w-2xl">
         <motion.img
           src={trrLogo}
           alt="TRR"
-          className="h-10 md:h-14 mx-auto mb-10"
+          className="h-10 md:h-14 mb-10"
           style={{ filter: "brightness(0) invert(1)" }}
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
@@ -36,7 +36,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.35 }}
-          className="text-lg md:text-xl text-primary-foreground/70 max-w-2xl mx-auto mb-10 leading-relaxed"
+          className="text-lg md:text-xl text-primary-foreground/70 max-w-xl mb-10 leading-relaxed"
         >
           TRR hjälper dig utforska, förstå och ta nästa steg i karriären. Gratis, via din arbetsgivare.
         </motion.p>
