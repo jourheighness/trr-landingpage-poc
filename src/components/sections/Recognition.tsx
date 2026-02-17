@@ -6,32 +6,32 @@ const situations = [
   {
     emoji: "😶",
     feeling: "Söndagskänslan",
-    quote: "Varje söndag kväll känner jag det i magen. Inte ångest — men inte heller glädje.",
+    quote: "Varje söndag kväll känner jag det i magen. Inte ångest, men inte heller glädje.",
     nudge: "Det behöver inte vara så.",
   },
   {
     emoji: "🪞",
     feeling: "Osynlig",
-    quote: "Jag gör mitt jobb bra. Men ingen ser det. Ingen frågar vad jag vill.",
-    nudge: "Du förtjänar att bli sedd.",
+    quote: "Jag har gjort samma sak i sex år. Ingen har frågat vad jag egentligen vill.",
+    nudge: "Någon borde fråga.",
   },
   {
     emoji: "🔇",
-    feeling: "Fel plats",
-    quote: "Det är inget fel på jobbet. Det passar bara inte mig längre.",
+    feeling: "Fel rum",
+    quote: "Det är inget fel på jobbet. Det passar bara inte mig längre. Kanske har det aldrig gjort det.",
     nudge: "Det är okej att växa ifrån något.",
   },
   {
     emoji: "⏳",
     feeling: "Fastnad",
-    quote: "Åren går. Jag gör samma sak. Jag vet att jag kan mer.",
-    nudge: "Du kan. Låt oss visa dig hur.",
+    quote: "Jag vet att jag kan mer. Men dagarna ser likadana ut och jag vet inte var jag ska börja.",
+    nudge: "Börja med att se vad som ligger nära.",
   },
   {
     emoji: "🤐",
     feeling: "Undervärderad",
-    quote: "Jag ger allt men får ingenting tillbaka. Varken lön, titel eller respekt.",
-    nudge: "Ditt värde finns — även utanför det här rummet.",
+    quote: "Jag löser problem som ingen annan ser. Men det syns inte i varken lön eller titel.",
+    nudge: "Ditt värde finns, även utanför det här rummet.",
   },
 ];
 
