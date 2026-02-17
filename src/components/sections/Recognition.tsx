@@ -3,18 +3,18 @@ import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { ArrowRight } from "lucide-react";
 
 // Import images
-import SmabarnslivetImage from '@/assets/Småbarnslivet-image.png';
-import VaxlaImage from '@/assets/Växla-image.png';
-import AccelereraImage from '@/assets/Accelerera-image.png';
-import UppsagdImage from '@/assets/Uppsagd-image.png';
-import VagskalImage from '@/assets/Vägskäl-image.png';
+import SmabarnslivetImage from '@/assets/smabarnslivet-image.png';
+import VaxlaImage from '@/assets/vaxla-image.png';
+import AccelereraImage from '@/assets/accelerera-image.png';
+import UppsagdImage from '@/assets/uppsagd-image.png';
+import VagskalImage from '@/assets/vagskal-image.png';
 
 // Import videos
-import SmabarnslivetVideo from '@/assets/Småbarnslivet-video.mp4';
-import VaxlaVideo from '@/assets/Växla-video.mp4';
-import AccelereraVideo from '@/assets/Accelerera-video.mp4';
-import UppsagdVideo from '@/assets/Uppsagd-video.mp4';
-import VagskalVideo from '@/assets/Vägskäl-video.mp4';
+import SmabarnslivetVideo from '@/assets/smabarnslivet-video.mp4';
+import VaxlaVideo from '@/assets/vaxla-video.mp4';
+import AccelereraVideo from '@/assets/accelerera-video.mp4';
+import UppsagdVideo from '@/assets/uppsagd-video.mp4';
+import VagskalVideo from '@/assets/vagskal-video.mp4';
 import { useRef } from "react";
 
 const cards = [
