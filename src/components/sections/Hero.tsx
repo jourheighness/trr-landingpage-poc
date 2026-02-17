@@ -38,7 +38,7 @@ export default function Hero() {
           transition={{ duration: 0.6, delay: 0.35 }}
           className="text-lg md:text-xl text-primary-foreground/70 max-w-xl mb-10 leading-relaxed"
         >
-          TRR hjälper dig utforska, förstå och ta nästa steg i karriären. Gratis, via din arbetsgivare.
+          Du behöver inte vara uppsagd. Du behöver inte vara i kris. Du behöver bara vara nyfiken.
         </motion.p>
 
         <motion.div
