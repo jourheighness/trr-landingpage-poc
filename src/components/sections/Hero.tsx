@@ -8,8 +8,8 @@ export default function Hero() {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden px-6">
       {/* Background image */}
       <div className="absolute inset-0">
-        <img src={heroBg} alt="" className="w-full h-full object-cover" />
-        <div className="absolute inset-0 bg-gradient-to-b from-[hsl(264,55%,20%,0.75)] via-[hsl(264,55%,25%,0.7)] to-[hsl(268,55%,18%,0.85)]" />
+        <img src={heroBg} alt="" className="w-full h-full object-cover object-center" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[hsl(264,55%,20%,0.5)] via-[hsl(264,55%,25%,0.4)] to-[hsl(268,55%,18%,0.65)]" />
       </div>
 
       <div className="relative z-10 max-w-4xl mx-auto text-center">
