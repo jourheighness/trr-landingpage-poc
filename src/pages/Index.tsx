@@ -1,13 +1,22 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import Hero from "@/components/sections/Hero";
+import JourneySteps from "@/components/sections/JourneySteps";
+import USPReveal from "@/components/sections/USPReveal";
+import Scenarios from "@/components/sections/Scenarios";
+import TrustSection from "@/components/sections/TrustSection";
+import OnYourTerms from "@/components/sections/OnYourTerms";
+import FinalCTA from "@/components/sections/FinalCTA";
 
 const Index = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
-    </div>
+    <main className="overflow-x-hidden">
+      <Hero />
+      <JourneySteps />
+      <USPReveal />
+      <Scenarios />
+      <TrustSection />
+      <OnYourTerms />
+      <FinalCTA />
+    </main>
   );
 };
 
