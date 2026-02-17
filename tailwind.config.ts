@@ -14,7 +14,7 @@ export default {
     },
     extend: {
       fontFamily: {
-        sans: ["'Plus Jakarta Sans'", "system-ui", "sans-serif"],
+        sans: ["'Libre Baskerville'", "Georgia", "serif"],
       },
       colors: {
         border: "hsl(var(--border))",
