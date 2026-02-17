@@ -17,7 +17,7 @@ export default function USPReveal() {
           transition={{ duration: 0.7 }}
           className="text-3xl md:text-5xl lg:text-6xl font-bold font-serif text-primary-foreground mb-8"
         >
-          Allt detta är redan betalt av din arbetsgivare
+          Det här kostar dig ingenting
         </motion.h2>
         <motion.p
           initial={{ opacity: 0, y: 20 }}
@@ -25,8 +25,7 @@ export default function USPReveal() {
           transition={{ duration: 0.6, delay: 0.3 }}
           className="text-lg md:text-xl text-primary-foreground/80 leading-relaxed max-w-3xl mx-auto"
         >
-          Genom kollektivavtalet har du tillgång till karriärcoaching, betald utbildning och
-          verktyg som hjälper dig framåt. TRR hjälper dig utforska, förstå och ta nästa steg i karriären — gratis, via din arbetsgivare.
+          Karriärcoaching. Betald utbildning. Verktyg som hjälper dig framåt. Allt ingår genom kollektivavtalet, via din arbetsgivare. Du behöver inte vara uppsagd, du behöver inte vara i kris. Du behöver bara vara lite nyfiken.
         </motion.p>
       </div>
     </section>
