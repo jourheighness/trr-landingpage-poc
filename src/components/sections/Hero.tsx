@@ -1,15 +1,15 @@
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import trrLogo from "@/assets/trr-logo.svg";
+import heroBg from "@/assets/hero-bg.png";
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-hero-gradient overflow-hidden px-6">
-      {/* Decorative floating shapes */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-20 -right-20 w-[500px] h-[500px] bg-primary/15 rounded-full blur-3xl animate-float" />
-        <div className="absolute -bottom-32 -left-32 w-[600px] h-[600px] bg-accent/10 rounded-full blur-3xl animate-float-delayed" />
-        <div className="absolute top-1/3 right-1/4 w-48 h-48 bg-primary-foreground/5 rounded-full blur-2xl" />
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden px-6">
+      {/* Background image */}
+      <div className="absolute inset-0">
+        <img src={heroBg} alt="" className="w-full h-full object-cover" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[hsl(264,55%,20%,0.75)] via-[hsl(264,55%,25%,0.7)] to-[hsl(268,55%,18%,0.85)]" />
       </div>
 
       <div className="relative z-10 max-w-4xl mx-auto text-center">
