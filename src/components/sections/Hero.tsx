@@ -36,7 +36,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.35 }}
-          className="text-lg md:text-xl text-primary-foreground/70 max-w-xl mb-10 leading-relaxed"
+          className="text-lg md:text-xl text-primary-foreground max-w-xl mb-10 leading-relaxed"
         >
           Du behöver inte vara uppsagd. Du behöver inte vara i kris. Du behöver bara vara nyfiken.
         </motion.p>
