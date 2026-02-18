@@ -1,108 +1,97 @@
-import { motion } from "framer-motion";
-import { Card, CardContent } from "@/components/ui/card";
+import { useState } from "react";
 
 const advisors = [
     {
-        name: "Anna Andersson",
-        role: "Karriärrådgivare",
-        blurb: "Jag brinner för att se människor växa och hitta nya vägar i karriären. Med min bakgrund inom HR kan jag guida dig rätt.",
-        expertise: ["Karriärväxling", "Intervjuträning", "CV-granskning"]
+        name: "Anna",
+        quote: "Du har mer att erbjuda än du tror. Låt oss hitta det tillsammans.",
+        image: "https://i.pravatar.cc/400?img=5",
     },
     {
-        name: "Erik Svensson",
-        role: "Starta Eget-expert",
-        blurb: "Att starta eget är en dröm för många. Jag hjälper dig att ta steget från idé till verklighet och bolla affärsplaner.",
-        expertise: ["Affärsplanering", "Nätverkande", "Marknadsföring"]
+        name: "Erik",
+        quote: "Att starta eget börjar med ett enda modigt steg. Jag går bredvid dig.",
+        image: "https://i.pravatar.cc/400?img=12",
     },
     {
-        name: "Maria Lindberg",
-        role: "Kompetensutvecklare",
-        blurb: "Ibland behöver man bara byta perspektiv. Jag hjälper dig att se dina kompetenser med nya ögon och hitta dolda talanger.",
-        expertise: ["Kompetensinventering", "LinkedIn-optimering", "Söka jobb"]
+        name: "Maria",
+        quote: "Ibland behöver man bara någon som lyssnar och ser det man själv missar.",
+        image: "https://i.pravatar.cc/400?img=32",
     },
     {
-        name: "Johan Karlsson",
-        role: "Rådgivare",
-        blurb: "Osäker på framtiden? Låt oss kartlägga dina möjligheter tillsammans och skapa en handlingsplan som håller.",
-        expertise: ["Målsättning", "Framtidsspaning", "Utbildningsval"]
+        name: "Johan",
+        quote: "Osäker på framtiden? Då är du på helt rätt plats.",
+        image: "https://i.pravatar.cc/400?img=53",
     },
     {
-        name: "Sofia Nilsson",
-        role: "Karriärcoach",
-        blurb: "Det är aldrig för sent att byta bana. Jag stöttar dig genom hela processen, från första tanke till nytt jobb.",
-        expertise: ["Omställning", "Motivation", "Intervjuteknik"]
+        name: "Sofia",
+        quote: "Det är aldrig för sent att hitta något som känns rätt på riktigt.",
+        image: "https://i.pravatar.cc/400?img=45",
     },
     {
-        name: "Marcus Berg",
-        role: "Rekryteringsexpert",
-        blurb: "Med 15 år inom rekrytering vet jag vad arbetsgivare letar efter. Låt oss slipa på din presentation.",
-        expertise: ["Personligt brev", "Pitch", "Löneförhandling"]
+        name: "Marcus",
+        quote: "Jag vet vad arbetsgivare letar efter. Låt oss visa vem du är.",
+        image: "https://i.pravatar.cc/400?img=59",
     },
     {
-        name: "Karin Holmberg",
-        role: "Studievägledare",
-        blurb: "Funderar du på att plugga vidare? Jag hjälper dig navigera bland utbildningar och finansieringslösningar.",
-        expertise: ["Studier", "CSN", "Omställningsstudiestöd"]
+        name: "Karin",
+        quote: "Nya kunskaper öppnar dörrar du inte visste fanns.",
+        image: "https://i.pravatar.cc/400?img=26",
     },
     {
-        name: "Anders Pettersson",
-        role: "Ledarutvecklare",
-        blurb: "Är du chef eller ledare i omställning? Jag hjälper dig hitta nästa utmaning där ditt ledarskap kommer till sin rätt.",
-        expertise: ["Executive search", "Ledarskap", "Styrelsearbete"]
-    }
+        name: "Anders",
+        quote: "Ditt ledarskap behövs. Låt oss hitta var det gör störst skillnad.",
+        image: "https://i.pravatar.cc/400?img=60",
+    },
 ];
 
 export default function Advisors() {
-    // Duplicate list for infinite scroll effect
     const duplicatedAdvisors = [...advisors, ...advisors];
+    const [paused, setPaused] = useState(false);
 
     return (
-        <section className="py-16 sm:py-20 md:py-32 bg-secondary/30 overflow-hidden">
+        <section className="py-16 sm:py-20 md:py-32 bg-trr-warm-light overflow-hidden">
             <div className="container section-padding mx-auto mb-16 text-center">
-                <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold font-serif mb-4 sm:mb-6 text-foreground">Våra rådgivare</h2>
+                <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold font-serif mb-4 sm:mb-6 text-foreground">
+                    Människorna bakom stödet
+                </h2>
                 <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-                    Vår data visar möjligheter, våra rådgivare hjälper dig realisera dem
+                    Riktiga människor som bryr sig om ditt nästa steg
                 </p>
             </div>
 
-            <div className="relative w-full overflow-hidden">
-                {/* Gradient masks for smooth fade edges */}
-                <div className="absolute top-0 left-0 w-8 md:w-32 h-full bg-gradient-to-r from-secondary/30 to-transparent z-10" />
-                <div className="absolute top-0 right-0 w-8 md:w-32 h-full bg-gradient-to-l from-secondary/30 to-transparent z-10" />
+            <div
+                className="relative w-full overflow-hidden"
+                onMouseEnter={() => setPaused(true)}
+                onMouseLeave={() => setPaused(false)}
+            >
+                <div className="absolute top-0 left-0 w-8 md:w-32 h-full bg-gradient-to-r from-trr-warm-light to-transparent z-10" />
+                <div className="absolute top-0 right-0 w-8 md:w-32 h-full bg-gradient-to-l from-trr-warm-light to-transparent z-10" />
 
-                <motion.div
-                    className="flex gap-6 section-padding w-max"
-                    animate={{ x: ["0%", "-50%"] }}
-                    transition={{
-                        duration: 60, // Slow scroll speed
-                        ease: "linear",
-                        repeat: Infinity,
-                        repeatType: "loop"
-                    }}
+                <div
+                    className="flex gap-6 items-end section-padding w-max h-[440px] sm:h-[470px] md:h-[500px] animate-carousel"
+                    style={{ animationPlayState: paused ? "paused" : "running" }}
                 >
                     {duplicatedAdvisors.map((advisor, index) => (
                         <div
                             key={index}
-                            className="flex-shrink-0 w-[280px] sm:w-[300px] md:w-[350px]"
+                            className="flex-shrink-0 w-[260px] sm:w-[280px] md:w-[300px] h-[390px] sm:h-[420px] md:h-[450px] hover:h-[440px] sm:hover:h-[470px] md:hover:h-[500px] rounded-2xl overflow-hidden relative group transition-all duration-700 ease-in-out"
                         >
-                            <Card className="h-full hover:shadow-lg transition-shadow duration-300 bg-card border-none">
-                                <CardContent className="p-6 flex flex-col h-full">
-                                    <div className="w-20 h-20 rounded-full bg-muted mb-6 mx-auto flex items-center justify-center text-muted-foreground font-serif text-2xl font-bold shrink-0">
-                                        {advisor.name.split(' ').map(n => n[0]).join('')}
-                                    </div>
-
-                                    <h3 className="text-xl font-bold text-center mb-1">{advisor.name}</h3>
-                                    <p className="text-sm text-primary font-medium text-center mb-4">{advisor.role}</p>
-
-                                    <p className="text-muted-foreground text-sm leading-relaxed text-center mb-6 flex-grow">
-                                        "{advisor.blurb}"
-                                    </p>
-
-                                </CardContent>
-                            </Card>
+                            <img
+                                src={advisor.image}
+                                alt={advisor.name}
+                                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-in-out group-hover:scale-110"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
+                            <div className="absolute bottom-0 left-0 right-0 p-5 text-white">
+                                <p className="text-sm leading-relaxed mb-2">
+                                    &ldquo;{advisor.quote}&rdquo;
+                                </p>
+                                <p className="text-base font-semibold">
+                                    {advisor.name}
+                                </p>
+                            </div>
                         </div>
                     ))}
-                </motion.div>
+                </div>
             </div>
         </section>
     );

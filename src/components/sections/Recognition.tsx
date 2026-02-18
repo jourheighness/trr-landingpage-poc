@@ -97,7 +97,7 @@ export default function Recognition() {
       </div>
 
       <div className="w-full section-padding">
-        <div className="flex flex-wrap lg:flex-nowrap justify-center gap-6 items-start lg:items-end h-auto lg:h-[600px] w-full">
+        <div className="flex flex-wrap lg:flex-nowrap justify-center gap-6 items-start lg:items-end h-auto lg:h-[650px] w-full">
           {cards.map((item, index) => (
             <motion.div
               key={item.header}
@@ -110,7 +110,7 @@ export default function Recognition() {
             >
               {/* Image/Video Area - Align bottom, grow up */}
               <div
-                className={`w-full rounded-2xl mb-4 transition-all duration-700 ease-in-out h-[250px] md:h-[300px] lg:h-[450px] lg:group-hover:h-[550px] overflow-hidden relative shadow-sm`}
+                className={`w-full rounded-2xl mb-6 transition-all duration-700 ease-in-out aspect-[2/3] lg:aspect-auto lg:h-[450px] lg:group-hover:h-[550px] overflow-hidden relative`}
               >
                 <video
                   ref={el => videoRefs.current[index] = el}

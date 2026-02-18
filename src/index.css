@@ -104,3 +104,12 @@
     background: var(--trr-gradient-warm);
   }
 }
+
+@keyframes carousel-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.animate-carousel {
+  animation: carousel-scroll 60s linear infinite;
+}
