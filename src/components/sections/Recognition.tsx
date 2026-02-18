@@ -76,13 +76,13 @@ export default function Recognition() {
   };
 
   return (
-    <section ref={ref} className="py-24 md:py-32">
-      <div className="max-w-4xl mx-auto px-6">
+    <section ref={ref} className="py-16 sm:py-20 md:py-32">
+      <div className="max-w-4xl mx-auto section-padding">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           animate={isVisible ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="text-3xl md:text-5xl font-bold font-serif text-center mb-6 text-foreground"
+          className="text-2xl sm:text-3xl md:text-5xl font-bold font-serif text-center mb-4 sm:mb-6 text-foreground"
         >
           Var befinner du dig i livet?
         </motion.h2>
@@ -90,21 +90,21 @@ export default function Recognition() {
           initial={{ opacity: 0, y: 15 }}
           animate={isVisible ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="text-muted-foreground text-base md:text-lg text-center mb-32 max-w-2xl mx-auto"
+          className="text-muted-foreground text-base md:text-lg text-center mb-12 md:mb-16 lg:mb-20 max-w-2xl mx-auto"
         >
           Ingen karriärväg är rak. Vi har verktygen för varje sväng, gupp och raksträcka
         </motion.p>
       </div>
 
-      <div className="w-full px-6 lg:px-16">
-        <div className="flex flex-wrap lg:flex-nowrap justify-center gap-6 items-center lg:items-end h-auto lg:h-[600px] w-full">
+      <div className="w-full section-padding">
+        <div className="flex flex-wrap lg:flex-nowrap justify-center gap-6 items-start lg:items-end h-auto lg:h-[600px] w-full">
           {cards.map((item, index) => (
             <motion.div
               key={item.header}
               initial={{ opacity: 0, y: 20 }}
               animate={isVisible ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: 0.15 + index * 0.1 }}
-              className="relative group cursor-pointer w-full md:w-[calc(33.33%-1rem)] lg:w-full lg:flex-1"
+              className="relative group cursor-pointer w-full sm:w-[calc(50%-0.75rem)] lg:w-full lg:flex-1"
               onMouseEnter={() => handleMouseEnter(index)}
               onMouseLeave={() => handleMouseLeave(index)}
             >
@@ -134,7 +134,7 @@ export default function Recognition() {
               </div>
 
               {/* Text Content */}
-              <div className="flex flex-col items-start px-1 h-auto md:h-[160px] justify-start">
+              <div className="flex flex-col items-start px-1 h-auto justify-start">
                 <h3 className="font-bold text-foreground text-xl mb-2">{item.header}</h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">{item.body}</p>
               </div>

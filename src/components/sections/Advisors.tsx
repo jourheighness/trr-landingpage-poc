@@ -57,9 +57,9 @@ export default function Advisors() {
     const duplicatedAdvisors = [...advisors, ...advisors];
 
     return (
-        <section className="py-24 md:py-32 bg-secondary/30 overflow-hidden">
-            <div className="container px-6 md:px-12 mx-auto mb-16 text-center">
-                <h2 className="text-3xl md:text-5xl font-bold font-serif mb-6 text-foreground">Våra rådgivare</h2>
+        <section className="py-16 sm:py-20 md:py-32 bg-secondary/30 overflow-hidden">
+            <div className="container section-padding mx-auto mb-16 text-center">
+                <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold font-serif mb-4 sm:mb-6 text-foreground">Våra rådgivare</h2>
                 <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
                     Vår data visar möjligheter, våra rådgivare hjälper dig realisera dem
                 </p>
@@ -71,7 +71,7 @@ export default function Advisors() {
                 <div className="absolute top-0 right-0 w-8 md:w-32 h-full bg-gradient-to-l from-secondary/30 to-transparent z-10" />
 
                 <motion.div
-                    className="flex gap-6 px-6 md:px-12 w-max"
+                    className="flex gap-6 section-padding w-max"
                     animate={{ x: ["0%", "-50%"] }}
                     transition={{
                         duration: 60, // Slow scroll speed
@@ -83,7 +83,7 @@ export default function Advisors() {
                     {duplicatedAdvisors.map((advisor, index) => (
                         <div
                             key={index}
-                            className="flex-shrink-0 w-[300px] md:w-[350px]"
+                            className="flex-shrink-0 w-[280px] sm:w-[300px] md:w-[350px]"
                         >
                             <Card className="h-full hover:shadow-lg transition-shadow duration-300 bg-card border-none">
                                 <CardContent className="p-6 flex flex-col h-full">

@@ -31,7 +31,7 @@ export default function DataInsights() {
     }, []);
 
     return (
-        <section ref={ref} className="bg-[#1a0b2e] py-24 md:py-32 overflow-hidden relative">
+        <section ref={ref} className="bg-[#1a0b2e] py-16 sm:py-20 md:py-32 overflow-hidden relative">
             {/* Background Video */}
             <div className="absolute top-0 left-0 w-full h-full z-0">
                 <video
@@ -45,12 +45,12 @@ export default function DataInsights() {
                 <div className="absolute inset-0 bg-[#1a0b2e]/60 mix-blend-multiply" /> {/* Tint overlay */}
             </div>
 
-            <div className="max-w-4xl mx-auto px-6 relative z-10 text-center text-white">
+            <div className="max-w-4xl mx-auto section-padding relative z-10 text-center text-white">
 
                 <div className="min-h-[120px] flex flex-col items-center justify-center mb-4">
-                    <motion.h2 layout className="text-3xl md:text-5xl lg:text-6xl font-serif font-bold leading-tight flex flex-wrap justify-center items-baseline gap-x-3 gap-y-2 max-w-5xl mx-auto drop-shadow-lg">
-                        <motion.span layout className="whitespace-nowrap">Vilka kompetenser behöver</motion.span>
-                        <div className="relative inline-flex flex-col h-[1.2em] overflow-hidden justify-end min-w-[3ch]">
+                    <motion.h2 layout className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-serif font-bold leading-tight flex flex-wrap justify-center items-baseline gap-x-2 sm:gap-x-3 gap-y-2 max-w-5xl mx-auto drop-shadow-lg">
+                        <motion.span layout>Vilka kompetenser behöver</motion.span>
+                        <div className="relative inline-flex flex-col h-[1.2em] overflow-hidden justify-end min-w-[4ch] sm:min-w-[5ch]">
                             <AnimatePresence mode="popLayout" initial={false}>
                                 <motion.span
                                     key={companies[index]}

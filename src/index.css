@@ -74,6 +74,15 @@
   }
 }
 
+@layer components {
+  .section-padding {
+    @apply px-5 sm:px-8 md:px-12 lg:px-16;
+  }
+  .section-spacing {
+    @apply py-16 sm:py-20 md:py-28 lg:py-32;
+  }
+}
+
 @layer utilities {
   .text-gradient-hero {
     @apply bg-clip-text text-transparent;

@@ -6,9 +6,9 @@ export default function USPReveal() {
   const { ref, isVisible } = useScrollAnimation();
 
   return (
-    <section ref={ref} className="bg-reveal-gradient py-12 md:py-20 px-6 relative overflow-hidden">
+    <section ref={ref} className="bg-reveal-gradient py-12 sm:py-16 md:py-20 section-padding relative overflow-hidden">
       {/* Decorative shapes */}
-      <div className="absolute top-10 left-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl" />
+      <div className="absolute top-4 left-4 sm:top-10 sm:left-10 w-40 h-40 sm:w-72 sm:h-72 bg-primary/10 rounded-full blur-3xl" />
 
       <div className="max-w-4xl mx-auto text-center relative z-10">
         <motion.h2
