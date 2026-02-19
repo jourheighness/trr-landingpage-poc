@@ -76,7 +76,7 @@ export default function Recognition() {
   };
 
   return (
-    <section ref={ref} className="py-16 sm:py-20 md:py-32">
+    <section ref={ref} className="py-12 sm:py-16 md:py-20 bg-background">
       <div className="max-w-4xl mx-auto section-padding">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
@@ -90,14 +90,14 @@ export default function Recognition() {
           initial={{ opacity: 0, y: 15 }}
           animate={isVisible ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="text-muted-foreground text-base md:text-lg text-center mb-12 md:mb-16 lg:mb-20 max-w-2xl mx-auto"
+          className="text-muted-foreground text-base md:text-lg text-center mb-6 md:mb-8 max-w-2xl mx-auto"
         >
           Ingen karriärväg är rak. Vi har verktygen för varje sväng, gupp och raksträcka
         </motion.p>
       </div>
 
       <div className="w-full section-padding">
-        <div className="flex flex-wrap lg:flex-nowrap justify-center gap-6 items-start lg:items-end h-auto lg:h-[650px] w-full">
+        <div className="flex flex-wrap lg:flex-nowrap justify-center gap-6 items-start lg:items-end h-auto lg:h-[560px] w-full">
           {cards.map((item, index) => (
             <motion.div
               key={item.header}
@@ -110,7 +110,7 @@ export default function Recognition() {
             >
               {/* Image/Video Area - Align bottom, grow up */}
               <div
-                className={`w-full rounded-2xl mb-6 transition-all duration-700 ease-in-out aspect-[2/3] lg:aspect-auto lg:h-[450px] lg:group-hover:h-[550px] overflow-hidden relative`}
+                className={`w-full rounded-2xl mb-3 transition-all duration-700 ease-in-out aspect-[2/3] lg:aspect-auto lg:h-[420px] lg:group-hover:h-[470px] overflow-hidden relative`}
               >
                 <video
                   ref={el => videoRefs.current[index] = el}
@@ -135,7 +135,7 @@ export default function Recognition() {
 
               {/* Text Content */}
               <div className="flex flex-col items-start px-1 h-auto justify-start">
-                <h3 className="font-bold text-foreground text-xl mb-2">{item.header}</h3>
+                <h3 className="font-bold text-foreground text-lg md:text-xl mb-1">{item.header}</h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">{item.body}</p>
               </div>
             </motion.div>

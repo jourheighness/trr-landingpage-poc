@@ -103,6 +103,10 @@
   .bg-warm-gradient {
     background: var(--trr-gradient-warm);
   }
+
+  .bg-warm-section {
+    background: linear-gradient(180deg, hsl(35 100% 96%) 0%, hsl(30 60% 94%) 50%, hsl(35 100% 96%) 100%);
+  }
 }
 
 @keyframes carousel-scroll {

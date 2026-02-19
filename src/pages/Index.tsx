@@ -5,7 +5,7 @@ import FinalCTA from "@/components/sections/FinalCTA";
 
 import DataInsights from "@/components/sections/DataInsights";
 import Advisors from "@/components/sections/Advisors";
-
+import Footer from "@/components/sections/Footer";
 const Index = () => {
   return (
     <main className="overflow-x-hidden">
@@ -15,6 +15,7 @@ const Index = () => {
       <DataInsights />
       <Advisors />
       <FinalCTA />
+      <Footer />
     </main>
   );
 };

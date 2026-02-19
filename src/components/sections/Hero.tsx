@@ -76,7 +76,7 @@ export default function Hero() {
 
         {/* Nav links — optically centered */}
         <motion.div
-          className="hidden md:flex items-center gap-8 absolute left-1/2 -translate-x-1/2"
+          className="hidden md:flex items-center gap-8 absolute left-1/2 -translate-x-1/2 -ml-24"
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}>
