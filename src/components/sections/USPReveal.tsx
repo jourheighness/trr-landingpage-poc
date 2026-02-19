@@ -5,15 +5,15 @@ import { ArrowRight } from "lucide-react";
 const benefits = [
   {
     tag: "Karriärcoaching",
-    description: "Personlig rådgivning som hjälper dig hitta rätt riktning, oavsett var du står.",
+    description: "Personlig rådgivning som hjälper dig hitta rätt riktning. Ingår i kollektivavtal med TRR.",
   },
   {
     tag: "Utbildning",
-    description: "Kompetensutveckling och kurser som stärker din profil på arbetsmarknaden.",
+    description: "Kompetensutveckling och kurser som stärker din profil. Ingår i kollektivavtal med TRR.",
   },
   {
-    tag: "Verktyg",
-    description: "Digitala resurser och nätverk som gör det enklare att ta nästa steg.",
+    tag: "Digitala verktyg",
+    description: "Resurser och nätverk som gör det enklare att ta nästa steg. Gratis och öppet för alla.",
   },
 ];
 

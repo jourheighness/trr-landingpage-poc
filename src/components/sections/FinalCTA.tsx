@@ -26,7 +26,7 @@ export default function FinalCTA() {
             Utforska dina möjligheter, tar 5 minuter
             <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0" />
           </button>
-          <p className="mt-6 text-muted-foreground text-sm">Ingen registrering krävs. Helt gratis för alla.</p>
+          <p className="mt-6 text-muted-foreground text-sm">Digitala verktyg öppna för alla. Coaching och stöd ingår via kollektivavtal.</p>
         </motion.div>
       </div>
     </section>
