@@ -59,7 +59,7 @@ export default function Advisors() {
         <section className="py-12 sm:py-16 md:py-20 bg-background overflow-hidden">
             <div className="container section-padding mx-auto mb-16 text-center">
                 <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold font-serif mb-4 sm:mb-6 text-foreground">
-                    Människorna bakom stödet
+                    Våra rådgivare
                 </h2>
                 <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
                     Riktiga människor som bryr sig om ditt nästa steg
